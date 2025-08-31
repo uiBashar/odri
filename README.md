@@ -1,3 +1,39 @@
+EduMateBD – AI Education Assistant (Bangla/English)
+
+Monorepo layout:
+
+- backend/ – FastAPI service with QA, Math solver, Quiz, Payments stubs
+- mobile/ – Flutter app scaffold (Bangla/English toggle, theme)
+
+Quickstart (Backend):
+
+1) Python env
+   python3 -m venv .venv
+   source .venv/bin/activate
+   pip install -r backend/requirements.txt
+
+2) Env
+   cp backend/.env.example backend/.env
+   export $(grep -v '^#' backend/.env | xargs) # or rely on dotenv
+
+3) Run
+   uvicorn app.main:app --app-dir backend --host 0.0.0.0 --port 8000
+
+Health: GET http://localhost:8000/health
+
+Endpoints:
+- POST /api/qa/ask
+- POST /api/math/solve
+- POST /api/quiz/generate
+- POST /api/payments/checkout
+- POST /api/payments/webhook
+
+Deploy:
+- Dockerfile provided in backend/
+
+Mobile (Flutter):
+- See mobile/ for a minimal scaffold with language toggle and theme.
+
 # Text To Image App
 
 [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/templates/tree/main/text-to-image-template)

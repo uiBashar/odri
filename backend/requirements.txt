@@ -1,0 +1,10 @@
+fastapi==0.111.0
+uvicorn[standard]==0.30.1
+pydantic==2.9.2
+pydantic-settings==2.6.1
+sympy==1.13.2
+redis==5.0.7
+openai==0.28.1
+python-dotenv==1.0.1
+httpx==0.27.0
+
