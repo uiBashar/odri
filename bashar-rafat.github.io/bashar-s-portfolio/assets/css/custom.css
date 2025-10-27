@@ -1,0 +1,10 @@
+:root {
+	--color-primary: #576665;
+	--color-accent: #FFD6D6;
+	--color-text: #020506;
+	--color-bg: #ffffff;
+}
+
+.text-olivelight { color: var(--color-primary); }
+.btn:hover > svg > path { transition: all .5s ease; }
+.dark body { background: #020506; }
